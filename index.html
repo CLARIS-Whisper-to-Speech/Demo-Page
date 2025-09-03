@@ -91,13 +91,15 @@
         </div>
 
         <!-- Video Section -->
-        <div class="row video-section">
+        <!-- <div class="row video-section">
             <div class="col-12 text-center">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/aG4DSJspDiA" 
-                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                <iframe width="560" height="315" src="" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen></iframe>
             </div>
-        </div>
+        </div> -->
         
         <div class="row p-2">
 
@@ -163,282 +165,23 @@
 
     <div class="d-block p-3 experimentSection">
         <h3 class="sectionTitle">R1: CLARIS outperforms all baselines on the wTIMIT corpus</h3>
-        <div class="row d-flex table-responsive overflow-auto audioContainer">
-            <table style="width: 100%;border-collapse: collapse;border: none">
-                <thead>
-                    <tr style="border-bottom: 2px solid black">
-                        <th style="text-align: center;padding: 8px" rowspan="2">Input Whisper</th>
-                        <th style="text-align: center;padding: 8px" rowspan="2">Text</th>
-                        <th style="text-align: center;padding: 8px" rowspan="2">Speaker</th>
-                        <th style="text-align: center;padding: 8px" colspan="7">Generated audio</th>
-                    </tr>
-                    <tr style="border-bottom: 2px solid black">
-                        <th style="text-align: center;padding: 8px">ASR-TTS</th>
-                        <th style="text-align: center;padding: 8px">Free VC</th>
-                        <th style="text-align: center;padding: 8px">Quick VC</th>
-                        <th style="text-align: center;padding: 8px">DistillW2N</th>
-                        <th style="text-align: center;padding: 8px">WESPER</th>
-                        <th style="text-align: center;padding: 8px">CLARIS</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/wTIMIT_44/ground_truth/s000_004.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px" rowspan="1">jane may earn more money by working hard</td>
-                        <td style="text-align: center;padding: 8px" rowspan="1">s000</td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/wTIMIT_44/asr_tts/s000_004.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/wTIMIT_44/free_vc/s000_004.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/wTIMIT_44/quick_vc/s000_004.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/wTIMIT_44/distillw2n/s000_004.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/wTIMIT_44/wesper/s000_004.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/wTIMIT_44/wesper/s000_004.wav"></audio>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/wTIMIT_Unseen_4/ground_truth/s127_009.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px" rowspan="1">where were you while we were away</td>
-                        <td style="text-align: center;padding: 8px" rowspan="1">s127</td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/wTIMIT_Unseen_4/asr_tts/s127_009.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/wTIMIT_Unseen_4/free_vc/s127_009.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/wTIMIT_Unseen_4/quick_vc/s127_009.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/wTIMIT_Unseen_4/distillw2n/s127_009.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/wTIMIT_Unseen_4/wesper/s127_009.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/wTIMIT_Unseen_4/wesper/s127_009.wav"></audio>
-                        </td>
-                    </tr>
-            </table>
-        </div>
+        <div class="row d-flex table-responsive overflow-auto audioContainer" id="wTIMIT44Container"></div>
+        <div class="row d-flex table-responsive overflow-auto audioContainer" id="wTIMIT4UnseenContainer"></div>
     </div>
     <div class="d-block p-3 experimentSection">
         <h3 class="sectionTitle">R2: Zero-Shot and One-Shot methods fail on unseen accents. CLARIS presents a way to recover performance through personlization using only 15-30mins of data</h3>
-        <div class="row d-flex table-responsive overflow-auto audioContainer">
-            <table style="width: 100%;border-collapse: collapse;border: none">
-                <thead>
-                    <tr style="border-bottom: 2px solid black">
-                        <th style="text-align: center;padding: 8px" rowspan="2">Input Whisper</th>
-                        <th style="text-align: center;padding: 8px" rowspan="2">Text</th>
-                        <th style="text-align: center;padding: 8px" colspan="7">Generated audio</th>
-                    </tr>
-                    <tr style="border-bottom: 2px solid black">
-                        <th style="text-align: center;padding: 8px">ASR-TTS</th>
-                        <th style="text-align: center;padding: 8px">Free VC</th>
-                        <th style="text-align: center;padding: 8px">Quick VC</th>
-                        <th style="text-align: center;padding: 8px">DistillW2N</th>
-                        <th style="text-align: center;padding: 8px">WESPER</th>
-                        <th style="text-align: center;padding: 8px">CLARIS</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/IndianAccentEnglish/ground_truth/speaker01_english_nonnative_effort1_10_1.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px" rowspan="1">for example, with more readiness and dexterity than any other</td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/IndianAccentEnglish/asr_tts/speaker01_english_nonnative_effort1_10_1.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/IndianAccentEnglish/free_vc/speaker01_english_nonnative_effort1_10_1.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/IndianAccentEnglish/quick_vc/speaker01_english_nonnative_effort1_10_1.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/IndianAccentEnglish/distillw2n/speaker01_english_nonnative_effort1_10_1.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/IndianAccentEnglish/wesper/speaker01_english_nonnative_effort1_10_1.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/IndianAccentEnglish/wesper/speaker01_english_nonnative_effort1_10_1.wav"></audio>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/IndianAccentEnglish/ground_truth/speaker01_english_nonnative_effort1_10_21.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px" rowspan="1">which is over and above his own consumption</td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/IndianAccentEnglish/asr_tts/speaker01_english_nonnative_effort1_10_21.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/IndianAccentEnglish/free_vc/speaker01_english_nonnative_effort1_10_21.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/IndianAccentEnglish/quick_vc/speaker01_english_nonnative_effort1_10_21.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/IndianAccentEnglish/distillw2n/speaker01_english_nonnative_effort1_10_21.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/IndianAccentEnglish/wesper/speaker01_english_nonnative_effort1_10_21.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/IndianAccentEnglish/wesper/speaker01_english_nonnative_effort1_10_21.wav"></audio>
-                        </td>
-                    </tr>
-            </table>
-        </div>
+        <div class="row d-flex table-responsive overflow-auto audioContainer" id="IndianAccentEnglishContainer"></div>
     </div>
     <div class="d-block p-3 experimentSection">
         <h3 class="sectionTitle">R3: Our Approach works for new languages as well</h3>
-        <div class="row d-flex table-responsive overflow-auto audioContainer">
-            <table style="width: 100%;border-collapse: collapse;border: none">
-                <thead>
-                    <tr style="border-bottom: 2px solid black">
-                        <th style="text-align: center;padding: 8px" rowspan="2">Input Whisper</th>
-                        <th style="text-align: center;padding: 8px" rowspan="2">Text</th>
-                        <th style="text-align: center;padding: 8px" colspan="7">Generated audio</th>
-                    </tr>
-                    <tr style="border-bottom: 2px solid black">
-                        <th style="text-align: center;padding: 8px">ASR-TTS</th>
-                        <th style="text-align: center;padding: 8px">DistillW2N</th>
-                        <th style="text-align: center;padding: 8px">WESPER</th>
-                        <th style="text-align: center;padding: 8px">CLARIS</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/hindi/ground_truth/speaker01_hindi_nonnative_effort1_train_hindimale_00658.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px" rowspan="1">अनुवाद के लिए हमारे पास, पेंगुइन की अच्छी किताबों की लंबी लिस्ट का होना, और किताबों, या लेखकों के बारे में, खुला नज़रिया रखना, हमारी सबसे बड़ी ताकत है</td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/hindi/asr_tts/speaker01_hindi_nonnative_effort1_train_hindimale_00658.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/hindi/distillw2n/speaker01_hindi_nonnative_effort1_train_hindimale_00658.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/hindi/wesper/speaker01_hindi_nonnative_effort1_train_hindimale_00658.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/hindi/wesper/speaker01_hindi_nonnative_effort1_train_hindimale_00658.wav"></audio>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/hindi/ground_truth/speaker01_hindi_nonnative_effort1_train_hindimale_01118.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px" rowspan="1">यवन म्लेच्छो के राजा, कालयवन, राक्षस को जरासंध ने, कृष्ण के विरोध में उकसाया</td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/hindi/asr_tts/speaker01_hindi_nonnative_effort1_train_hindimale_01118.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/hindi/distillw2n/speaker01_hindi_nonnative_effort1_train_hindimale_01118.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/hindi/wesper/speaker01_hindi_nonnative_effort1_train_hindimale_01118.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/hindi/wesper/speaker01_hindi_nonnative_effort1_train_hindimale_01118.wav"></audio>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <div class="row d-flex table-responsive overflow-auto audioContainer" id="HindiContainer"></div>
     </div>
     <div class="d-block p-3 experimentSection">
         <h3 class="sectionTitle">R4: CLARIS enables effective communication for people suffering from dysarthria</h3>
-        <h4>The following samples are for speakers from TORGO corpus</h4>
-        <div class="row d-flex table-responsive overflow-auto audioContainer">
-            <table style="width: 100%;border-collapse: collapse;border: none">
-                <thead>
-                    <tr style="border-bottom: 2px solid black">
-                        <th style="text-align: center;padding: 8px" rowspan="2">Input Whisper</th>
-                        <th style="text-align: center;padding: 8px" rowspan="2">Text</th>
-                        <th style="text-align: center;padding: 8px" rowspan="2">Speaker</th>
-                        <th style="text-align: center;padding: 8px" rowspan="2">Severity</th>
-                        <th style="text-align: center;padding: 8px" colspan="7">Generated audio</th>
-                    </tr>
-                    <tr style="border-bottom: 2px solid black">
-                        <th style="text-align: center;padding: 8px">ASR-TTS</th>
-                        <th style="text-align: center;padding: 8px">WESPER</th>
-                        <th style="text-align: center;padding: 8px">CLARIS</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/TORGO/ground_truth/F01_1_arrayMic_0008.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px" rowspan="1">Except in the winter when the ooze or snow or ice prevents</td>
-                        <td style="text-align: center;padding: 8px" rowspan="1">F01</td>
-                        <td style="text-align: center;padding: 8px" rowspan="1">Low</td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/TORGO/asr_tts/F01_1_arrayMic_0008.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/TORGO/wesper/F01_1_arrayMic_0008.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/TORGO/wesper/F01_1_arrayMic_0008.wav"></audio>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/TORGO/ground_truth/F04_1_arrayMic_0006.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px" rowspan="1">yet he still thinks as swiftly as ever</td>
-                        <td style="text-align: center;padding: 8px" rowspan="1">F04</td>
-                        <td style="text-align: center;padding: 8px" rowspan="1">Medium</td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/TORGO/asr_tts/F04_1_arrayMic_0006.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/TORGO/wesper/F04_1_arrayMic_0006.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/TORGO/wesper/F04_1_arrayMic_0006.wav"></audio>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/TORGO/ground_truth/M01_1_headMic_0005.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px" rowspan="1">When he speaks his voice is just a bit cracked and quivers a trifle</td>
-                        <td style="text-align: center;padding: 8px" rowspan="1">M01</td>
-                        <td style="text-align: center;padding: 8px" rowspan="1">High</td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/TORGO/asr_tts/M01_1_headMic_0005.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/TORGO/wesper/M01_1_headMic_0005.wav"></audio>
-                        </td>
-                        <td style="text-align: center;padding: 8px">
-                            <audio controls="" style="width: 150px" src="./resources/audio/TORGO/wesper/M01_1_headMic_0005.wav"></audio>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <h4 class="gtText">The following samples are for speakers from TORGO corpus</h4>
+        <div class="row d-flex table-responsive overflow-auto audioContainer" id="TORGOContainer"></div>
     </div>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
