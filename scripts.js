@@ -13,8 +13,8 @@ const tablesData = [
       "CLARIS": "claris",
     },
     rows: [
-      { inputAudio: "s000_004.wav", speaker: "s000", text: "jane may earn more money by working hard" },
-      { inputAudio: "s006_009.wav", speaker: "s006", text: "where were you while we were away" }
+      { inputAudio: "s000_004.mp3", speaker: "s000", text: "jane may earn more money by working hard" },
+      { inputAudio: "s006_009.mp3", speaker: "s006", text: "where were you while we were away" }
     ]
   },
   {
@@ -31,8 +31,8 @@ const tablesData = [
       "CLARIS": "claris",
     },
     rows: [
-      { inputAudio: "s127_004.wav", speaker: "s000", text: "jane may earn more money by working hard" },
-      { inputAudio: "s130_009.wav", speaker: "s006", text: "where were you while we were away" }
+      { inputAudio: "s127_004.mp3", speaker: "s000", text: "jane may earn more money by working hard" },
+      { inputAudio: "s130_009.mp3", speaker: "s006", text: "where were you while we were away" }
     ]
   },
   {
@@ -51,11 +51,11 @@ const tablesData = [
     },
     rows: [
         { 
-            inputAudio: "speaker01_english_nonnative_effort1_10_1.wav", 
+            inputAudio: "speaker01_english_nonnative_effort1_10_1.mp3", 
             text: "for example, with more readiness and dexterity than any other." 
         },
         { 
-            inputAudio: "speaker01_english_nonnative_effort1_10_21.wav", 
+            inputAudio: "speaker01_english_nonnative_effort1_10_21.mp3", 
             text: "which is over and above his own consumption." 
         }
     ]
@@ -73,11 +73,11 @@ const tablesData = [
     },
     rows: [
         {
-            inputAudio: "speaker01_hindi_nonnative_effort1_train_hindimale_00658.wav",
+            inputAudio: "speaker01_hindi_nonnative_effort1_train_hindimale_00658.mp3",
             text: "अनुवाद के लिए हमारे पास, पेंगुइन की अच्छी किताबों की लंबी लिस्ट का होना, और किताबों, या लेखकों के बारे में, खुला नज़रिया रखना, हमारी सबसे बड़ी ताकत है"
         },
         {
-            inputAudio: "speaker01_hindi_nonnative_effort1_train_hindimale_01118.wav",
+            inputAudio: "speaker01_hindi_nonnative_effort1_train_hindimale_01118.mp3",
             text: "यवन म्लेच्छो के राजा, कालयवन, राक्षस को जरासंध ने, कृष्ण के विरोध में उकसाया"
         }
     ]
@@ -94,19 +94,19 @@ const tablesData = [
     },
     rows: [
         {
-            inputAudio: "F01_1_arrayMic_0008.wav",
+            inputAudio: "F01_1_arrayMic_0008.mp3",
             speaker: "F01",
             severity: "Medium",
             text: "Except in the winter when the ooze or snow or ice prevents"
         },
         {
-            inputAudio: "F04_1_arrayMic_0006.wav",
+            inputAudio: "F04_1_arrayMic_0006.mp3",
             speaker: "F04",
             severity: "Low",
             text: "yet he still thinks as swiftly as ever",
         },
         {
-            inputAudio: "M01_1_headMic_0005.wav",
+            inputAudio: "M01_1_headMic_0005.mp3",
             speaker: "M01",
             severity: "High",
             text: "When he speaks his voice is just a bit cracked and quivers a trifle"
